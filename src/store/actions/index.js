@@ -1,0 +1,3 @@
+export {
+  fetchDisks,
+} from './disksCatalog';
