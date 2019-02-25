@@ -19,11 +19,17 @@ export const fetchDisks = () => (dispatch) => {
   dispatch(fetchDisksStart());
   axios.get('/disks.json')
     .then((res) => {
-      console.log(res);
-      dispatch(fetchDisksSuccess());
+      const fetchedDisks = [];
+      Object.keys(res.data).forEach((key) => {
+        fetchedDisks.push({
+          ...res.data[key],
+          id: key,
+        });
+      });
+      dispatch(fetchDisksSuccess(fetchedDisks));
     })
     .catch((err) => {
       console.log(err);
-      dispatch(fetchDisksFail());
+      dispatch(fetchDisksFail(err));
     });
 };
