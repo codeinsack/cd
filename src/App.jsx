@@ -11,7 +11,7 @@ class App extends Component {
       <div>
         <Layout>
           <Switch>
-            <Route path="/" component={DisksCatalog} />
+            <Route path="/" exact component={DisksCatalog} />
             <Route path="/music" component={DisksCatalog} />
             <Route path="/movie" component={DisksCatalog} />
             <Route path="/game" component={DisksCatalog} />

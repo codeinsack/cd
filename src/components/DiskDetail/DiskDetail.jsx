@@ -3,11 +3,11 @@ import axios from '../../axios-disks';
 
 class DiskDetail extends Component {
   componentDidMount() {
-    console.log(this.props);
+    const { match: { params: id } } = this.props;
 
-    // axios.get(`/disks/${id}`)
-    //   .then(res => console.log(res))
-    //   .catch(err => console.log(err));
+    axios.get(`/disks/${id}`)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
   }
 
   render() {
