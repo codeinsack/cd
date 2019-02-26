@@ -3,10 +3,10 @@ import React from 'react';
 import Wrapper from './DiskStyled';
 
 const Disk = ({
-  author, genre, title, year, imageUrl,
+  author, genre, title, year, imageUrl, clicked
 }) => (
   <Wrapper imageUrl={imageUrl}>
-    <div>
+    <div onClick={clicked}>
       <h2>{title} ({year})</h2>
       <h4>{genre}</h4>
       <p>{author}</p>

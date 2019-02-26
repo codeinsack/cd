@@ -24,6 +24,11 @@ class DisksCatalog extends Component {
     onInitDisks();
   }
 
+  postSelectedHandler = (id) => {
+    const { history } = this.props;
+    history.push(`/${id}`);
+  };
+
   render() {
     const {
       disks, loading, location: { pathname }, filter,
@@ -56,6 +61,7 @@ class DisksCatalog extends Component {
         title={disk.title}
         year={disk.year}
         imageUrl={disk.imageUrl}
+        clicked={() => this.postSelectedHandler(disk.id)}
       />
     ));
 
