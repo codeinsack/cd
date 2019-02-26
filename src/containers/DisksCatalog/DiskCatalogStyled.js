@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  border: 1px solid black;
   margin: 0 75px;
   min-height: 800px;
   display: flex;

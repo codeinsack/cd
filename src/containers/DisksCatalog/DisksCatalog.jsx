@@ -9,6 +9,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 const mapStateToProps = state => ({
   disks: state.disksCatalog.disks,
   loading: state.disksCatalog.loading,
+  filter: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -24,9 +25,29 @@ class DisksCatalog extends Component {
   }
 
   render() {
-    const { disks, loading } = this.props;
+    const {
+      disks, loading, location: { pathname }, filter,
+    } = this.props;
+    const categoryFilter = pathname.slice(1);
 
-    let discoverDisks = disks.map(disk => (
+    let categoryFiltered = null;
+    let titleFiltered = null;
+
+    if (categoryFilter) {
+      categoryFiltered = disks.filter(disk => disk.category === categoryFilter);
+    } else {
+      categoryFiltered = disks;
+    }
+
+    if (filter.text) {
+      titleFiltered = categoryFiltered.filter(
+        disk => disk.title.toLowerCase().includes(filter.text.toLowerCase()),
+      );
+    } else {
+      titleFiltered = categoryFiltered;
+    }
+
+    let discoverDisks = titleFiltered.map(disk => (
       <Disk
         key={disk.id}
         author={disk.author}
