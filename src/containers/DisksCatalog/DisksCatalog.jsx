@@ -55,6 +55,7 @@ class DisksCatalog extends Component {
         genre={disk.genre}
         title={disk.title}
         year={disk.year}
+        imageUrl={disk.imageUrl}
       />
     ));
 

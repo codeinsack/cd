@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   .sk-cube-grid .sk-cube {
     width: 33%;
     height: 33%;
-    background-color: darkorchid;
+    background-color: #40a4c8;
     float: left;
     -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
             animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 

@@ -3,13 +3,14 @@ import React from 'react';
 import Wrapper from './DiskStyled';
 
 const Disk = ({
-  author, category, genre, title, year,
+  author, genre, title, year, imageUrl,
 }) => (
-  <Wrapper>
-    <p><span>{category}</span></p>
-    <h2>{title} ({year})</h2>
-    <h4>{genre}</h4>
-    <p>{author}</p>
+  <Wrapper imageUrl={imageUrl}>
+    <div>
+      <h2>{title} ({year})</h2>
+      <h4>{genre}</h4>
+      <p>{author}</p>
+    </div>
   </Wrapper>
 );
 

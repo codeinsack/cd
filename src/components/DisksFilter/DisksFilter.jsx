@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { filterText } from '../../store/actions';
+import Wrapper from './DisksFilterStyled';
 
 const mapStateToProps = state => ({
   filter: state.filter,
@@ -23,14 +24,14 @@ class DisksFilter extends Component {
     const { filter } = this.props;
 
     return (
-      <div>
+      <Wrapper>
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Search by name"
           value={filter.text}
           onChange={this.inputChangeHandler}
         />
-      </div>
+      </Wrapper>
     );
   }
 }
