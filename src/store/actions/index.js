@@ -5,3 +5,7 @@ export {
 export {
   filterText,
 } from './filter';
+
+export {
+  fetchDisk,
+} from './disk';
