@@ -9,3 +9,10 @@ export {
 export {
   fetchDisk,
 } from './disk';
+
+export {
+  logout,
+  logoutSucceed,
+  auth,
+  authCheckState,
+} from './auth';

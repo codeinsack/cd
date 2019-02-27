@@ -15,7 +15,9 @@ const Wrapper = styled.button`
     if (props.btnType === 'primary') {
       return '#40a4c8';
     } if (props.btnType === 'danger') {
-      return 'red';
+      return '#e84930';
+    } if (props.btnType === 'success') {
+      return '#09ba03';
     }
     return '';
   }};
@@ -23,7 +25,9 @@ const Wrapper = styled.button`
     if (props.btnType === 'primary') {
       return '#40a4c8';
     } if (props.btnType === 'danger') {
-      return 'red';
+      return '#e84930';
+    } if (props.btnType === 'success') {
+      return '#09ba03';
     }
     return '';
   }};
@@ -33,7 +37,9 @@ const Wrapper = styled.button`
     if (props.btnType === 'primary') {
       return '#40a4c8';
     } if (props.btnType === 'danger') {
-      return 'red';
+      return '#e84930';
+    } if (props.btnType === 'success') {
+      return '#09ba03';
     }
     return '';
   }};
