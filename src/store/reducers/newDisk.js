@@ -3,8 +3,9 @@ import { createReducer } from 'reduxsauce';
 import * as actionTypes from '../actions/actionTypes';
 
 export const INITIAL_STATE = {
-  disks: [],
+  disk: null,
   loading: false,
+  success: false,
 };
 
 export const start = (state = INITIAL_STATE) => ({
@@ -14,8 +15,9 @@ export const start = (state = INITIAL_STATE) => ({
 
 export const success = (state = INITIAL_STATE, action) => ({
   ...state,
-  disks: action.disks,
+  disk: action.disk,
   loading: false,
+  success: true,
 });
 
 export const fail = (state = INITIAL_STATE) => ({
@@ -24,9 +26,9 @@ export const fail = (state = INITIAL_STATE) => ({
 });
 
 export const HANDLERS = {
-  [actionTypes.FETCH_DISKS_START]: start,
-  [actionTypes.FETCH_DISKS_SUCCESS]: success,
-  [actionTypes.FETCH_DISKS_FAIL]: fail,
+  [actionTypes.CREATE_NEW_DISK_START]: start,
+  [actionTypes.CREATE_NEW_DISK_SUCCESS]: success,
+  [actionTypes.CREATE_NEW_DISK_FAIL]: fail,
 };
 
 export default createReducer(INITIAL_STATE, HANDLERS);

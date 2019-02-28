@@ -14,6 +14,7 @@ import disksCatalogReducer from './store/reducers/disksCatalog';
 import filterReducer from './store/reducers/filter';
 import diskReducer from './store/reducers/disk';
 import authReducer from './store/reducers/auth';
+import newDiskReducer from './store/reducers/newDisk';
 import watchAuth from './store/sagas';
 
 const composeEnhanters = process.env.NODE_ENV
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   filter: filterReducer,
   disk: diskReducer,
   auth: authReducer,
+  newDisk: newDiskReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();

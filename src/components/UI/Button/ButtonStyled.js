@@ -12,39 +12,48 @@ const Wrapper = styled.button`
   border-width: 3px;
   
   border-color: ${(props) => {
-    if (props.btnType === 'primary') {
-      return '#40a4c8';
-    } if (props.btnType === 'danger') {
-      return '#e84930';
-    } if (props.btnType === 'success') {
-      return '#09ba03';
+    if (!props.disabled) {
+      if (props.btnType === 'primary') {
+        return '#40a4c8';
+      }
+      if (props.btnType === 'danger') {
+        return '#e84930';
+      }
+      if (props.btnType === 'success') {
+        return '#09ba03';
+      }
     }
-    return '';
+    return '#ccc';
   }};
   color: ${(props) => {
-    if (props.btnType === 'primary') {
-      return '#40a4c8';
-    } if (props.btnType === 'danger') {
-      return '#e84930';
-    } if (props.btnType === 'success') {
-      return '#09ba03';
+    if (!props.disabled) {
+      if (props.btnType === 'primary') {
+        return '#40a4c8';
+      } if (props.btnType === 'danger') {
+        return '#e84930';
+      } if (props.btnType === 'success') {
+        return '#09ba03';
+      }
     }
-    return '';
+    return '#ccc';
   }};
   
   :hover {
       background-color: ${(props) => {
-    if (props.btnType === 'primary') {
-      return '#40a4c8';
-    } if (props.btnType === 'danger') {
-      return '#e84930';
-    } if (props.btnType === 'success') {
-      return '#09ba03';
+    if (!props.disabled) {
+      if (props.btnType === 'primary') {
+        return '#40a4c8';
+      } if (props.btnType === 'danger') {
+        return '#e84930';
+      } if (props.btnType === 'success') {
+        return '#09ba03';
+      }
     }
-    return '';
+    return '#ccc';
   }};
     color: white;
   }
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
 export default Wrapper;

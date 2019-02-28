@@ -11,6 +11,7 @@ const navigationItems = ({ isAuthenticated }) => (
     <NavigationItem link="/music">Music</NavigationItem>
     <NavigationItem link="/movie">Movies</NavigationItem>
     <NavigationItem link="/game">Games</NavigationItem>
+    { isAuthenticated ? <NavigationItem link="/new">New Disk</NavigationItem> : null}
     { isAuthenticated ? <NavigationItem link="/logout">Logout</NavigationItem>
       : <NavigationItem link="/auth">Login</NavigationItem>}
 

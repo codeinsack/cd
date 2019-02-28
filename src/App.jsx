@@ -8,6 +8,7 @@ import DiskDetail from './components/DiskDetail/DiskDetail';
 import Auth from './containers/Auth/Auth';
 import Logout from './containers/Auth/Logout/Logout';
 import { authCheckState } from './store/actions';
+import NewDisk from './containers/NewDisk/NewDisk';
 
 const mapDispatchToProps = dispatch => ({
   onTryAutoSignup: () => dispatch(authCheckState()),
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path="/game" component={DisksCatalog} />
             <Route path="/auth" component={Auth} />
             <Route path="/logout" component={Logout} />
+            <Route path="/new" component={NewDisk} />
             <Route path="/:id" exact component={DiskDetail} />
           </Switch>
         </Layout>

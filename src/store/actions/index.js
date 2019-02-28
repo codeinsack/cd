@@ -11,6 +11,10 @@ export {
 } from './disk';
 
 export {
+  createNewDisk,
+} from './newDisk';
+
+export {
   logout,
   logoutSucceed,
   auth,
